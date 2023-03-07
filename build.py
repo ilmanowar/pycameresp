@@ -153,6 +153,8 @@ make -C mpy-cross -j 8
 #####################
 # Build micropython #
 #####################
+cd "%(OUTPUT_DIR)s/esp-idf/"
+source export.sh
 cd "%(OUTPUT_DIR)s/micropython/ports/esp32"
 make submodules -j 8
 make BOARD=%(BOARD)s -j 8
